@@ -132,7 +132,7 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
 
                             <div className={kcClsx("kcFormOptionsWrapperClass")}>
                                     <span>
-                                        <a tabIndex={6} href={'https://app.cngei.it/external/reset'} className="text-sm text-gray-600">
+                                        <a tabIndex={6} href={'https://app.cngei.it/external/reset'} className="text-sm text-gray-600 link">
                                             Hai dimenticato la password o è la prima volta che accedi?
                                         </a>
                                     </span>
