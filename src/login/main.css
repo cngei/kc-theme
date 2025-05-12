@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+.kcLoginClass {
+    background-color: rgb(37, 112, 72);
+}
