@@ -54,10 +54,22 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
 
     return (
         <div className={`${kcClsx("kcLoginClass")} h-screen w-screen text-white flex flex-col items-center justify-center px-2 py-4`}>
+             <div className="snowflakes" aria-hidden="true">
+                <div className="snowflake">❅</div>
+                <div className="snowflake">❅</div>
+                <div className="snowflake">❆</div>
+                <div className="snowflake">❄</div>
+                <div className="snowflake">❅</div>
+                <div className="snowflake">❆</div>
+                <div className="snowflake">❄</div>
+                <div className="snowflake">❅</div>
+                <div className="snowflake">❆</div>
+                <div className="snowflake">❄</div>
+            </div>
             <div id="kc-header" className={kcClsx("kcHeaderClass")}>
                 <div id="kc-header-wrapper" className={'flex items-center gap-2'}>
                     <img src={logo} alt="logo" className="w-10 h-10" />
-                    <h1 className="text-2xl font-bold">CNGEI</h1>
+                    <h1 className="text-2xl font-bold">CNGEI <span className="text-red-300">Buone feste! 🎄</span></h1>
                 </div>
             </div>
             <div className={'bg-white rounded-lg p-4 w-full max-w-md mt-4 text-black'}>
