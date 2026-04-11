@@ -19,7 +19,6 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
     const { msg, msgStr } = i18n;
 
     const [isLoginButtonDisabled, setIsLoginButtonDisabled] = useState(false);
-    const isApril = new Date().getMonth() === 3;
 
     return (
         <Template
@@ -44,7 +43,7 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                             }}
                             action={url.loginAction}
                             method="post"
-                            className="flex flex-col gap-2 py-2 w-full"
+                            className='flex flex-col gap-2 py-2 w-full'
                         >
                             {!usernameHidden && (
                                 <div className={kcClsx("kcFormGroupClass")}>
@@ -53,7 +52,7 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                         id="username"
                                         name="username"
                                         placeholder="Numero di tessera"
-                                        className="input w-full"
+                                        className='input w-full'
                                         defaultValue={login.username ?? ""}
                                         type="text"
                                         autoFocus
@@ -79,7 +78,7 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                         tabIndex={3}
                                         id="password"
                                         placeholder="Password"
-                                        className="input w-full"
+                                        className='input w-full'
                                         name="password"
                                         type="password"
                                         autoComplete="current-password"
@@ -108,7 +107,7 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                                     id="rememberMe"
                                                     name="rememberMe"
                                                     type="checkbox"
-                                                    className="checkbox"
+                                                    className='checkbox'
                                                     defaultChecked={!!login.rememberMe}
                                                 />{" "}
                                                 {msg("rememberMe")}
@@ -123,7 +122,7 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                 <input
                                     tabIndex={7}
                                     disabled={isLoginButtonDisabled}
-                                    className={`btn btn-success w-full ${isLoginButtonDisabled ? "btn-disabled" : ""}`}
+                                    className={`btn btn-success w-full ${isLoginButtonDisabled ? 'btn-disabled' : ''}`}
                                     name="login"
                                     id="kc-login"
                                     type="submit"
@@ -132,17 +131,12 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                             </div>
 
                             <div className={kcClsx("kcFormOptionsWrapperClass")}>
-                                <span>
-                                    <a tabIndex={6} href={"https://app.cngei.it/external/reset"} className="text-sm text-gray-600 link">
-                                        Hai dimenticato la password o è la prima volta che accedi?
-                                    </a>
-                                </span>
+                                    <span>
+                                        <a tabIndex={6} href={'https://app.cngei.it/external/reset'} className="text-sm text-gray-600 link">
+                                            Hai dimenticato la password o è la prima volta che accedi?
+                                        </a>
+                                    </span>
                             </div>
-                            {isApril && (<span>
-                                <a tabIndex={7} href={"https://cngei.github.io/pesce26/"} className="text-md font-bold text-green-800 link">
-                                    Hai dimenticato la magnifica esperienza di un campo estivo?
-                                </a>
-                            </span>)}
                         </form>
                     )}
                 </div>
